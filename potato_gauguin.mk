@@ -7,12 +7,11 @@
 # Inherit from gauguin device
 $(call inherit-product, device/xiaomi/gauguin/device.mk)
 
-# Inherit some common DotOS stuff.
-$(call inherit-product, vendor/dot/config/common.mk)
-TARGET_BOOT_ANIMATION_RES := 1080
+# Inherit our custom product configuration
+$(call inherit-product, vendor/potato/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := dot_gauguin
+PRODUCT_NAME := potato_gauguin
 PRODUCT_DEVICE := gauguin
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
